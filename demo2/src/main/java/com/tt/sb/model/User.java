@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class User {
 	@Id
 	@GeneratedValue
-	private int user_num;
+	private Long user_num;
 	@Column(length=20)
 	private String user_id;
 	@Column(name="pwd",length=20)
@@ -20,17 +20,17 @@ public class User {
 		super();
 	}
 	
-	public User(int user_num, String user_id, String user_pwd, String user_name){
+	public User(Long user_num, String user_id, String user_pwd, String user_name){
 		this();
 		this.user_num = user_num;
 		this.user_id = user_id;
 		this.user_pwd = user_pwd;
 		this.user_name = user_name;
 	}
-	public int getUser_num() {
+	public Long getUser_num() {
 		return user_num;
 	}
-	public void setUser_num(int user_num) {
+	public void setUser_num(Long user_num) {
 		this.user_num = user_num;
 	}
 	public String getUser_id() {
