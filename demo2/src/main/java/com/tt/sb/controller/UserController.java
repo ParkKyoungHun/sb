@@ -22,7 +22,7 @@ public class UserController {
 	public void getEmployees(@RequestBody User hm) {
 		us.save(hm);
 	}
-	
+	//http://localhost:8080/api/user/1
 	@RequestMapping(value="/user/{user_num}", method=RequestMethod.GET)
 	public User getUser(@PathVariable("user_num") long userNum){
 		return us.findOne(userNum);
